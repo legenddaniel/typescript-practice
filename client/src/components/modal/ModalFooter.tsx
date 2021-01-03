@@ -1,6 +1,6 @@
-import Props from '../../interfaces/props';
+import { PropsChildren } from '../../interfaces/props';
 
-const ModalFooter = (props: Props) => {
+const ModalFooter = (props: PropsChildren) => {
     return (
         <footer className="modal-footer">
             {props.children}

@@ -1,6 +1,6 @@
-import Props from '../../interfaces/props';
+import { PropsChildren } from '../../interfaces/props';
 
-const ModalHeader = (props: Props) => {
+const ModalHeader = (props: PropsChildren) => {
     return (
         <header className="modal-header">
             {props.children}

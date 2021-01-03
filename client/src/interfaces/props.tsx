@@ -1,6 +1,9 @@
-interface Props {
+export interface PropsChildren {
     children?: React.ReactNode;
-    open?: boolean;
 }
 
-export default Props;
+export interface PropsDialog extends PropsChildren {
+    open: boolean;
+}
+
+// export { PropsChildren };

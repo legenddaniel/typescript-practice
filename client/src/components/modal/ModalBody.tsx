@@ -1,6 +1,6 @@
-import Props from '../../interfaces/props';
+import { PropsChildren } from '../../interfaces/props';
 
-const ModalBody = (props: Props) => {
+const ModalBody = (props: PropsChildren) => {
     return (
         <section className="modal-body">
             {props.children}

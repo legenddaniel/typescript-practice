@@ -1,20 +1,15 @@
 import { useState } from 'react';
 
-import Props from '../../interfaces/props';
-
-import ModalHeader from './ModalHeader';
-import ModalBody from './ModalBody';
-import ModalFooter from './ModalFooter';
+import { PropsDialog } from '../../interfaces/props';
 
 
-const Modal = (props: Props): JSX.Element => {
+const Modal = (props: PropsDialog): JSX.Element => {
+    const { open, children } = props;
 
     return (
-        <dialog className="modal-wrapper" open={props.open}>
+        <dialog className="modal-wrapper" open={open}>
             <div className="modal-container">
-                <ModalHeader>header</ModalHeader>
-                <ModalBody>body</ModalBody>
-                <ModalFooter>footer</ModalFooter>
+                {children}
             </div>
         </dialog>
     )
