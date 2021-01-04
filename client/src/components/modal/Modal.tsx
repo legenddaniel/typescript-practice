@@ -1,17 +1,22 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import { PropsDialog } from '../../interfaces/props';
 
+const ModalWrapper = styled.dialog`
+    width: 60%;
+    height: 60%;
+    background-color: grey;
+`;
 
-const Modal = (props: PropsDialog): JSX.Element => {
-    const { open, children } = props;
-
+const Modal = ({open, children}: PropsDialog): JSX.Element => {
+    
     return (
-        <dialog className="modal-wrapper" open={open}>
+        <ModalWrapper open={open}>
             <div className="modal-container">
                 {children}
             </div>
-        </dialog>
+        </ModalWrapper>
     )
 }
 

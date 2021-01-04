@@ -5,12 +5,19 @@ import LoginForm from './LoginForm';
 import ModalHeader from './modal/ModalHeader';
 import ModalBody from './modal/ModalBody';
 import ModalFooter from './modal/ModalFooter';
+import ButtonClose from './buttons/ButtonClose';
 
 function App() {
   const [open, setOpen] = useState(false);
+
+  const toggleModal = (): void => {
+    setOpen(!open);
+  };
+
   return (
     <>
       <Modal open={open}>
+        <ButtonClose />
         <ModalHeader>
           Header
         </ModalHeader>
@@ -21,7 +28,7 @@ function App() {
           Footer
         </ModalFooter>
       </Modal>
-      <button onClick={setOpen.bind(null, !open)}>Toggle Modal</button>
+      <button onClick={toggleModal}>Toggle Modal</button>
     </>
   );
 }
